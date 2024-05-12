@@ -7,9 +7,18 @@
 <meta name=theme-color content=#1565c0>
 <style>.sf-hidden{display:none!important}</style>
 <meta http-equiv=content-security-policy content="default-src 'none'; font-src 'self' data:; img-src 'self' data:; style-src 'unsafe-inline'; media-src 'self' data:; script-src 'unsafe-inline' data:;">
-<style>img[src="data:,"],source[src="data:,"]{display:none!important}</style>
+<style>img[src="data:,"],source[src="data:,"]{display:none!important}
+
+.row.h-50 { height: 50px; } /* Adjust the height as necessary */
+.col.border-right { border-right: 2px solid #ccc; } /* Ensure this exists */
+
+
+
+
+</style>
 <head>
   <title>Pouya Shaeri</title>
+  <link rel="icon" href="/Pictures/iconlogo.png" type="png">
   <meta name="google-site-verification" content="qmM2cx9QOHW8c-EpDr5jl02Ho-u9kRWhANf1nLLGuUE"/>
 </head>
 
@@ -19,7 +28,7 @@
 <header><nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id=navbar-main>
 
 <div class=container-xl><div class="d-none d-lg-inline-flex">
-<a class=navbar-brand>Pouya Shaeri</a></div>
+<a class="navbar-brand" href="https://pouyashaeri.github.io">Pouya Shaeri</a>
 <button type=button class="navbar-toggler sf-hidden" data-toggle=collapse data-target=#navbar-content aria-controls=navbar-content aria-expanded=false aria-label="Toggle navigation">
 </button>
 <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none sf-hidden"></div>
@@ -29,7 +38,7 @@
 	<li class=nav-item><a class=nav-link href=#education data-target=#education><span>Education</span></a>
 	<li class=nav-item><a class=nav-link href=#projects data-target=#projects><span>Projects</span></a>
 	<li class=nav-item><a class=nav-link href=#publications data-target=#publications><span>Publications</span></a>
-	<li class=nav-item><a class=nav-link href="files/CV_PouyaShaeri.pdf" download="CV"><span>CV</span></a>
+	<li class=nav-item><a class=nav-link href="Files/CV_PouyaShaeri.pdf" download="CV"><span>CV</span></a>
 	</ul>
 </div>
 <li class="nav-item d-none d-lg-inline-flex">
@@ -60,12 +69,14 @@
 </div></div>
 
 <div class="col-12 col-lg-8"><h1>About Me</h1><div class=article-style>
-<p>Hi, I'm Pouya! I'm a master's candidate student in Computer Science - Data Mining at Shahid Beheshti University, and I have the privilege to be mentored by <a href="http://facultymembers.sbu.ac.ir/katanforoush/">Dr. Ali Katanforoush</a>.
-Also, I'm a teaching assistant and instructor at Shahid Beheshti University. 
-<p>I hold a bachelor's degree in Mathematics and Applications from University of Tehran.
-<p>I'm mainly interested in ML, AI and NLP. My current research is focused on Fake News Detection. The goal is to guarantee the validity of the news which is being spread in social media by considering having a few labels of the target, as the most truthful problems in the world are Semi-Supervised.
-<p>If you have any questions about my work or research/academia/programming-related topics, please feel free to reach out!
-<p>
+<p style="text-align: justify;">I'm a PhD student in Computer Science and a research associate at Arizona State University, where I have the privilege of being mentored by <a href="https://search.asu.edu/profile/854979">Dr. Ariane Middel</a>. I'm also a <a href="https://shadelab.asu.edu/team/">member</a> of the <a href="https://shadelab.asu.edu/">ShaDE Lab</a> (led by Dr. Middel) and collaborate on research projects focused on climate modeling and urban climate data analysis.</p>
+
+<p style="text-align: justify;">I'm mainly interested in urban climate modeling, data mining, machine learning, and deep learning. Currently, my work revolves around climate modeling and urban climate data analysis.</p>
+
+<p style="text-align: justify;">I hold a master's degree in Computer Science - Data Mining from Shahid Beheshti University, where I was mentored by <a href="http://facultymembers.sbu.ac.ir/katanforoush/">Dr. Ali Katanforoush</a>, and a bachelor's degree in Mathematics and Applications from the University of Tehran. During my master's period, my research focused on fake news detection.</p>
+
+<p style="text-align: justify;">If you have any questions about my work, research, or anything related to academia or programming, please feel free to reach out!</p>
+
 <!--
 <i class="fas fa-download pr-1 fa-fw"></i> Download my
 <a href="files/CV_PouyaShaeri.pdf" download="CV">CV</a>.</p>
@@ -74,45 +85,150 @@ Also, I'm a teaching assistant and instructor at Shahid Beheshti University.
 
 </section>
 
-<section id=education class="home-section wg-features"><div class=home-section-bg></div>
-<div class=container>
-<div class=row>
-<div class="section-heading col-12 col-lg-4 mb-3 mb-lg-0 d-flex flex-column align-items-center align-items-lg-start"><h1 class=mb-0>Education</h1></div>
-<div class="col-12 col-lg-8"><div class="row experience"><div class="col-auto text-center flex-column d-none d-sm-flex"><div class="row h-50">
-<div class=col>&nbsp;</div><div class=col>&nbsp;</div></div><div class=m-2><span class="badge badge-pill border">&nbsp;</span></div>
-<div class="row h-50">
-<div class="col border-right">&nbsp;</div><div class=col>&nbsp;</div></div></div><div class="col py-2"><div class=card><div class=card-body>
-<div class="d-flex align-content-start"><div class="mr-2 mb-2">
-<img src="Pictures/utlogo.png" width=56px height=56px alt="University of Tehran logo" loading=lazy></div>
-<div>
-<div class="section-subheading card-title exp-title text-muted my-0">BSc in Mathematics and Applications</div>
-<div class="section-subheading card-title exp-company text-muted my-0">University of Tehran</div><div class="text-muted exp-meta">2013–2020
-</div></div></div>
-<div class=card-text><p><ul><li><i class="fa-li fas fa-graduation-cap"></i><div class=description><p class=course>Optimization: Linear and Non-Linear
-	<li>Algebra and Linear Numeric Algebra</ul></div></div></div></div></div>
+<section id="education" class="home-section wg-features">
+    <div class="home-section-bg"></div>
+    <div class="container">
+        <div class="row">
+            <div class="section-heading col-12 col-lg-4 mb-3 mb-lg-0 d-flex flex-column align-items-center align-items-lg-start">
+                <h1 class="mb-0">Education</h1>
+            </div>
+            <div class="col-12 col-lg-8">
+                <!-- PhD Section (Arizona State University) -->
+                <div class="row experience">
+                    <div class="col-auto text-center flex-column d-none d-sm-flex">
+                        <div class="row h-50">
+                            <div class="col">&nbsp;</div>
+                            <div class="col">&nbsp;</div>
+                        </div>
+                        <div class="m-2">
+                            <span class="badge badge-pill border">&nbsp;</span>
+                        </div>
+                        <div class="row h-50">
+                            <div class="col border-right">&nbsp;</div>
+                            <div class="col">&nbsp;</div>
+                        </div>
+                    </div>
+                    <div class="col py-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex align-content-start">
+                                    <div class="mr-2 mb-2">
+                                        <img src="Pictures/asulogo.png" width="56px" height="56px" alt="Arizona State University logo" loading="lazy">
+                                    </div>
+                                    <div>
+                                        <div class="section-subheading card-title exp-title text-muted my-0">PhD in Computer Science</div>
+                                        <div class="section-subheading card-title exp-company text-muted my-0">Arizona State University</div>
+                                        <div class="text-muted exp-meta">2024 - Present</div>
+                                    </div>
+                                </div>
+                                <div class="card-text">
+                                    <ul>
+                                        <li>Research Area: Climate Modeling and Urban Climate Data Analysis
+                                            <ul>
+                                                <li>Urban Climate Modeling</li>
+                                                <li>Data Mining</li>
+                                                <li>Machine Learning</li>
+                                                <li>Deep Learning</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-<div class="row experience"><div class="col-auto text-center flex-column d-none d-sm-flex"><div class="row h-50"><div class="col border-right">&nbsp;</div>
-<div class=col>&nbsp;</div></div><div class=m-2><span class="badge badge-pill border">&nbsp;</span></div><div class="row h-50"><div class=col>&nbsp;</div>
-<div class=col>&nbsp;</div></div></div><div class="col py-2"><div class=card><div class=card-body><div class="d-flex align-content-start"><div class="mr-2 mb-2">
-<img src="Pictures/sbulogo.png" width=56px height=56px alt="Shahid Beheshti University logo" loading=lazy></div>
-<div><div class="section-subheading card-title exp-title text-muted my-0">MSc in Computer Science</div>
-<div class="section-subheading card-title exp-company text-muted my-0">Shahid Beheshti University</div>
-<div class="text-muted exp-meta">2021-2023</div></div></div>
-<div class=card-text><p><ul><li>Major: Data Mining
-	<ul><li>Machine Learning</li>
-		<li>Data Mining</li>
-		<li>Reinforcement Learning</li>
-		<li>Neural Networks</li></ul>
-	</ul></div></div></div></div></div></div>
-	</div></div></section>
-<!--
-<section id=accomplishments class="home-section wg-accomplishments"><div class=home-section-bg></div>
-<div class=container><div class=row><div class="section-heading col-12 col-lg-4 mb-3 mb-lg-0 d-flex flex-column align-items-center align-items-lg-start"><h1 class=mb-0>Accomplish­ments</h1></div><div class="col-12 col-lg-8"><div class="card experience course"><div class=card-body><div class="d-flex align-content-start"><div class="mr-2 mb-2"><a href=https://www.coursera.org/ target=_blank rel=noopener><img src="data:image/svg+xml;base64,PHN2ZyBmaWxsPSJub25lIiBoZWlnaHQ9IjYwMCIgdmlld0JveD0iMCAwIDYwMCA2MDAiIHdpZHRoPSI2MDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0ibTMwNy4wMzEgMjkyLjk2OWgtMTQuMDYydjE0LjA2MmgxNC4wNjJ6IiBmaWxsPSIjZmZmIi8+PHBhdGggZD0ibTYwMCAwaC02MDB2NjAwaDYwMHoiIGZpbGw9IiNmZmYiLz48cGF0aCBkPSJtNjAwIDBoLTYwMHY2MDBoNjAweiIgZmlsbD0iIzAwNTZkMiIvPjxnIGZpbGw9IiNmZmYiPjxwYXRoIGQ9Im0xMTcuOTEzIDMwMC40MzRjMC0xOS4zMDEgMTUuOTIzLTM0Ljg3NSAzNS44NTktMzQuODc1IDIwLjA3IDAgMzUuOTkyIDE1LjU3NCAzNS45OTIgMzQuODc1IDAgMTkuMTY3LTE1LjkyMiAzNS4wMDctMzUuOTkyIDM1LjAwNy0xOS45MzYgMC0zNS44NTktMTUuOTczLTM1Ljg1OS0zNS4wMDd6bTU0LjcyNSAwYzAtOS41ODMtOC40My0xOC4xMDQtMTguODY2LTE4LjEwNC0xMC4zMDMgMC0xOC41OTggOC41MjEtMTguNTk4IDE4LjEwNCAwIDkuNzE3IDguNDI5IDE4LjIzNiAxOC41OTggMTguMjM2IDEwLjQzNiAwIDE4Ljg2Ni04LjUxOSAxOC44NjYtMTguMjM2eiIvPjxwYXRoIGQ9Im00NzguMTUgMzAwLjk2NWMwLTIxLjE2NCAxNy4zMjYtMzUuNDA2IDMzLjAzNi0zNS40MDYgMTAuNzQ3IDAgMTYuOTI0IDMuMTk0IDIxLjA4NiA5LjQ1MmwxLjYxMi04LjI1M2gxNi4xMTZ2NjcuMzUzaC0xNi4xMTZsLTIuMDE1LTYuOTIzYy00LjcwMSA1LjA1OS0xMC42MSA4LjI1My0yMC41NDYgOC4yNTMtMTUuNzEzIDAtMzMuMTczLTEzLjU3Ny0zMy4xNzMtMzQuNDc2em01NC43OTUtLjEzM2MwLTEwLjI0Ny04LjQ2My0xOC41MDItMTguOTM2LTE4LjUwMi0xMC4zNDEgMC0xOC42NjggOC4zODgtMTguNjY4IDE4Ljc3MSAwIDkuMzE2IDguNDYxIDE3LjcwMiAxOC42NjggMTcuNzAyIDEwLjYwNy0uMTMzIDE4LjkzNi04LjUxOSAxOC45MzYtMTcuOTcxeiIvPjxwYXRoIGQ9Im00NTguODMzIDI3NC45ODJ2LTcuNzIxaC0xNy4xMDF2NjYuMjExaDE3LjEwMXYtMzUuNzI0YzAtMTAuNzI5IDUuMjIxLTE2LjM1NiAxNC40ODctMTYuMzU2LjY1MiAwIDEuMTc2IDAgMS42OTcuMTMxbDMuMTMzLTE1Ljk2NGMtOC44NzUuMTMxLTE1LjI3MiAzLjE0LTE5LjMxNyA5LjQyM3oiLz48cGF0aCBkPSJtMjg0LjE1OCAyNzQuOTgydi03LjcyMWgtMTcuNjIzbC4xMzUgNjYuMjExaDE3LjYyNWwtLjEzNy0zNS43MjRjMC0xMC43MjkgNS4zODItMTYuMzU2IDE0LjgwMS0xNi4zNTYuNjcyIDAgMS4yMDkgMCAxLjc1LjEzMWwzLjIyOC0xNS45NjRjLTkuMTUuMTMxLTE1Ljc0MSAzLjE0LTE5Ljc3OSA5LjQyM3oiLz48cGF0aCBkPSJtMTk2LjY1NCAzMDcuNzc2di00MS4yMzNoMTcuMjA5djM5LjEwNGMwIDguNjQ1IDQuNzMgMTMuNjk5IDEzLjAwNiAxMy42OTkgOS4xOTYgMCAxNC41ODMtNS43MTggMTQuNTgzLTE2LjYyNHYtMzYuMTc5aDE3LjIwOXY2Ny4zaC0xNy4yMDl2LTcuODQ1Yy00LjA3MyA2LjM4My0xMC42NDEgOS40NDItMTkuNzA2IDkuNDQyLTE1LjUwMi4xMzMtMjUuMDkyLTExLjE3Mi0yNS4wOTItMjcuNjY0eiIvPjxwYXRoIGQ9Im0zNjUuOTQ1IDMwMC4zNjljMC0xOC44NjcgMTMuNjIxLTM0Ljk0MiAzNC45ODUtMzQuODA5IDE5Ljg5MyAwIDMzLjkxMyAxNS45NDIgMzMuOTEzIDM0LjU0MSAwIDEuODYxLS4xMzQgMy44NTQtLjQwMSA1LjU4MmwtNTEuNDA1LS4xMzNjMi4wMDQgOC4xMDQgOC42NzggMTMuODE2IDE4LjY5MyAxMy45NDkgNi4xNDEgMCAxMi42ODUtMi4yNTkgMTYuNjktNy4zMDhsMTEuODg1IDkuNTY3Yy02LjE0NCA4LjYzNC0xNi45NTkgMTMuNjgzLTI4LjQ0MSAxMy42ODMtMjAuMjk3LS4yNjUtMzUuOTE5LTE1LjQxMS0zNS45MTktMzUuMDcyem01MS40MDgtNi45MDljLS45MzctNi43NzctOC4xNDUtMTIuMDkxLTE2LjQyMy0xMi4wOTEtOC4xNDUgMC0xNC42ODkgNC43ODMtMTcuMjI2IDExLjk1OHoiLz48cGF0aCBkPSJtMzAzLjkzNyAzMTkuNTU5IDE1LjUyMi04LjA3M2MyLjU0MiA1LjU1OCA3Ljc2IDguNzM0IDE0Ljk4NCA4LjczNCA2LjY5MSAwIDkuMjM0LTIuMTE4IDkuMjM0LTUuMDI5IDAtMTAuNzIxLTM2LjkzLTQuMjM0LTM2LjkzLTI4Ljg1MyAwLTEzLjYzMSAxMi4wNDMtMjAuNzc5IDI2Ljg5NC0yMC43NzkgMTEuMjM5IDAgMjEuMjc0IDQuODk3IDI2Ljc2IDE0LjE2M2wtMTUuMzg4IDguMDczYy0yLjI3Mi00LjUtNi41NTUtNy4wMTUtMTIuMDQxLTcuMDE1LTUuMzUyIDAtNy44OTQgMS44NTQtNy44OTQgNC44OTcgMCAxMC40NTYgMzYuOTMgMy44MzcgMzYuOTMgMjguODUzIDAgMTIuOTctMTAuNzA0IDIwLjkxMS0yNy45NjYgMjAuOTExLTE0LjcxNy0uMTMyLTI1LjAyLTQuODk3LTMwLjEwNS0xNS44ODJ6Ii8+PHBhdGggZD0ibTUwIDMwMC4wNzRjMC0xOS4xNjEgMTUuNzg5Ny0zNC41MTUgMzUuNTU5OS0zNC41MTUgMTIuNzM3NyAwIDIzLjc1MTEgNi4zMDEgMzAuMTIwMSAxNS43NDdsLTE0Ljg2MSA4LjUzMmMtMy40NTAzLTQuNzI0LTguODkwMi03Ljg3My0xNS4yNTkxLTcuODczLTEwLjIxNjkgMC0xOC40NDM0IDguMzk4LTE4LjQ0MzQgMTcuOTc4IDAgOS41NzggOC4zNTkgMTcuOTc2IDE4LjQ0MzQgMTcuOTc2IDYuNjM0MiAwIDEyLjQ3MjQtMy40MTEgMTUuNjU3MS04LjUyOWwxNC43MjggOC42NmMtNi4yMzYgOS44NDMtMTcuNTE0OCAxNi40MDYtMzAuMzg1MSAxNi40MDYtMTkuNzcwMi4xMzEtMzUuNTU5OS0xNS42MTYtMzUuNTU5OS0zNC4zODJ6Ii8+PC9nPjwvc3ZnPgo=" width=56px height=56px alt=Coursera loading=lazy></a></div><div><div class="section-subheading card-title exp-title text-muted my-0">Neural Networks and Deep Learning</div><div class="card-subtitle my-0 article-metadata"><a href=https://www.coursera.org/ target=_blank rel=noopener>Coursera</a><span class=middot-divider></span>
-Jan 2021</div></div></div><a class=card-link href=https://www.coursera.org/ target=_blank rel=noopener>See certificate</a></div></div><div class="card experience course"><div class=card-body><div class="d-flex align-content-start"><div class="mr-2 mb-2"><a href=https://www.edx.org/ target=_blank rel=noopener><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI0LjEuMiwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA1NTIuODggMzEwLjcyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1NTIuODggMzEwLjcyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+Cgkuc3Qwe2ZpbGw6IzAyMjYyQjt9Cgkuc3Qxe2ZpbGw6I0ZGRkZGRjt9Cjwvc3R5bGU+Cjxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iMzUzLjQzLDUwLjk2IDM2NC4wOCwwIDUxLjMsMCAwLDI0NS4wMSAyNjEuNTIsMjQ1LjAxIDI0Ny4xMiwzMTAuNzIgNDk3LjYzLDMxMC43MiA1NTIuODgsNTAuOTYgIi8+CjxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik0xMDYuNiwyMTMuNzNjLTcuMDksMC0xMy43OS0xLjE2LTIwLjA5LTMuNDljLTYuMy0yLjMyLTExLjgtNS43NS0xNi40OS0xMC4yOAoJYy00LjY5LTQuNTMtOC4zOS0xMC4xLTExLjExLTE2LjcyYy0yLjcyLTYuNjItNC4wOC0xNC4yMi00LjA4LTIyLjgxYzAtMTEuNzQsMS42My0yMi40NCw0LjktMzIuMDkKCWMzLjI3LTkuNjUsNy44Mi0xNy45MiwxMy42NS0yNC44MmM1LjgzLTYuODksMTIuODItMTIuMjMsMjAuOTgtMTYuMDFjOC4xNS0zLjc4LDE3LjA4LTUuNjcsMjYuNzctNS42NwoJYzYuNTQsMCwxMi43NCwxLjE0LDE4LjYyLDMuNDNjNS44NywyLjI5LDExLjAxLDUuNjEsMTUuNDIsOS45OWM0LjQxLDQuMzcsNy45Miw5Ljc1LDEwLjUyLDE2LjEzYzIuNiw2LjM4LDMuOSwxMy43MSwzLjksMjEuOTgKCWMwLDEuMjYtMC4wNCwyLjc0LTAuMTIsNC40M2MtMC4wOCwxLjctMC4yLDMuNDMtMC4zNiw1LjJjLTAuMTYsMS43Ny0wLjMyLDMuNTEtMC40Nyw1LjJjLTAuMTYsMS42OS0wLjM1LDMuMTMtMC41OSw0LjMxSDc2LjIyCgljLTAuMDgsMS4xMS0wLjE0LDIuMTctMC4xOCwzLjE5Yy0wLjA0LDEuMDMtMC4wNiwyLjA5LTAuMDYsMy4xOWMwLDYuNTQsMC45NSwxMi4xMSwyLjg0LDE2LjcyYzEuODksNC42MSw0LjM1LDguMzcsNy4zOSwxMS4yOQoJYzMuMDMsMi45Miw2LjQ0LDUuMDIsMTAuMjIsNi4zMmMzLjc4LDEuMyw3LjYsMS45NSwxMS40NiwxLjk1YzguNDMsMCwxNS4yMS0xLjQ2LDIwLjMzLTQuMzdjNS4xMi0yLjkxLDkuMDItNi44NSwxMS43LTExLjgyaDIxLjYzCgljLTEuMzQsNC44OS0zLjU1LDkuNDYtNi42MiwxMy43MWMtMy4wNyw0LjI1LTYuOTUsNy45NC0xMS42NCwxMS4wNWMtNC42OSwzLjExLTEwLjEzLDUuNTYtMTYuMzEsNy4zMwoJQzEyMC44LDIxMi44NCwxMTQsMjEzLjczLDEwNi42LDIxMy43M3ogTTE0OC4wOCwxMzYuMDhjMC4wOC0wLjM5LDAuMTQtMS4xMiwwLjE4LTIuMTljMC4wNC0xLjA2LDAuMDYtMi4xMSwwLjA2LTMuMTMKCWMwLTQuMTgtMC42MS04LjE0LTEuODMtMTEuODhjLTEuMjItMy43NC0zLjA1LTcuMDMtNS41LTkuODdjLTIuNDQtMi44NC01LjQ4LTUuMDgtOS4xLTYuNzRjLTMuNjMtMS42NS03Ljg0LTIuNDgtMTIuNjUtMi40OAoJYy00Ljg5LDAtOS40NiwwLjg3LTEzLjcxLDIuNmMtNC4yNiwxLjczLTguMTIsNC4yLTExLjU4LDcuMzljLTMuNDcsMy4xOS02LjQ2LDcuMDEtOC45OCwxMS40NmMtMi41Miw0LjQ1LTQuNTMsOS40LTYuMDMsMTQuODMKCUgxNDguMDh6Ii8+CjxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik0yMjcuNTgsMjEzLjczYy02LjM4LDAtMTIuMzctMS4yLTE3Ljk3LTMuNjFjLTUuNi0yLjQtMTAuNS01Ljg1LTE0LjcxLTEwLjM0Yy00LjIyLTQuNDktNy41NS05LjkzLTkuOTktMTYuMzEKCWMtMi40NC02LjM4LTMuNjYtMTMuNTEtMy42Ni0yMS4zOWMwLTcuNjQsMC43Ny0xNC45NSwyLjMtMjEuOTJzMy43Mi0xMy40Myw2LjU2LTE5LjM4YzIuODQtNS45NSw2LjI0LTExLjMzLDEwLjIyLTE2LjEzCgljMy45OC00LjgxLDguMzktOC45LDEzLjI0LTEyLjI5YzQuODUtMy4zOSwxMC4wOC01Ljk5LDE1LjcyLTcuOGM1LjYzLTEuODEsMTEuNTItMi43MiwxNy42Ny0yLjcyYzQuNTcsMCw4LjkyLDAuNjMsMTMuMDYsMS44OQoJYzQuMTQsMS4yNiw3Ljg4LDMuMDEsMTEuMjMsNS4yNmMzLjM1LDIuMjUsNi4yMiw0Ljk2LDguNjMsOC4xNWMyLjQsMy4xOSw0LjE2LDYuNjgsNS4yNiwxMC40NmgxLjg5bDE1LjcyLTc0LjExaDIwLjY4bC0zNy44MiwxNzgKCWgtMTkuNjJsMy42Ni0xNy4zN2gtMS44OWMtNC42NSw2LjA3LTEwLjQ4LDEwLjg1LTE3LjQ5LDE0LjM2QzI0My4yNiwyMTEuOTcsMjM1LjY5LDIxMy43MywyMjcuNTgsMjEzLjczeiBNMjM0LjA4LDE5NS40MQoJYzYuNjIsMCwxMi43NC0xLjU1LDE4LjM4LTQuNjdjNS42My0zLjExLDEwLjU0LTcuMzcsMTQuNzEtMTIuNzZjNC4xOC01LjQsNy40NS0xMS43NCw5LjgxLTE5LjAzYzIuMzYtNy4yOSwzLjU1LTE1LjE1LDMuNTUtMjMuNTgKCWMwLTUuNDQtMC43NS0xMC4zMi0yLjI1LTE0LjY2Yy0xLjUtNC4zMy0zLjYzLTguMDItNi4zOC0xMS4wNWMtMi43Ni0zLjAzLTYuMTEtNS4zOC0xMC4wNS03LjAzYy0zLjk0LTEuNjYtOC4zOS0yLjQ4LTEzLjM2LTIuNDgKCWMtNi41NCwwLTEyLjYxLDEuNDYtMTguMiw0LjM3Yy01LjYsMi45Mi0xMC40NCw2Ljk3LTE0LjU0LDEyLjE3Yy00LjEsNS4yLTcuMzMsMTEuNDEtOS42OSwxOC42MXMtMy41NSwxNS4xMS0zLjU1LDIzLjcKCWMwLDUuMzYsMC43NywxMC4yOCwyLjMxLDE0Ljc3YzEuNTQsNC40OSwzLjY4LDguMzMsNi40NCwxMS41MmMyLjc2LDMuMTksNi4wNyw1LjY3LDkuOTMsNy40NQoJQzIyNS4wNSwxOTQuNTIsMjI5LjM1LDE5NS40MSwyMzQuMDgsMTk1LjQxeiIvPgo8Zz4KCTxwb2x5Z29uIGNsYXNzPSJzdDEiIHBvaW50cz0iNTA4Ljk0LDg0LjQ1IDQ2Mi44MSw4NC40NSA0MTIuNDksMTQ2Ljc1IDQxMC4wMSwxNDYuNzUgMzgzLjQsODQuNDUgMzM2Ljc0LDg0LjQ1IDM3Ni43NCwxNzQuOTQKCQkyOTAuMzksMjc3LjIzIDMzNS45LDI3Ny4yMyAzOTEuMzIsMjExLjUyIDM5NS4wNiwyMTEuNTIgNDI1LDI3Ny4yMyA0NzAuNzksMjc3LjIzIDQyNi41MSwxNzkuNDcgCSIvPgo8L2c+Cjwvc3ZnPgo=" width=56px height=56px alt=edX loading=lazy></a></div><div><a href=https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals target=_blank rel=noopener><div class="section-subheading card-title exp-title text-muted my-0">Blockchain Fundamentals</div></a><div class="card-subtitle my-0 article-metadata"><a href=https://www.edx.org/ target=_blank rel=noopener>edX</a><span class=middot-divider></span>
-Jan 2021</div></div></div><div class=card-text>Formulated informed blockchain models, hypotheses, and use cases.</div><a class=card-link href=https://www.edx.org/ target=_blank rel=noopener>See certificate</a></div></div><div class="card experience course"><div class=card-body><div class="d-flex align-content-start"><div class="mr-2 mb-2"><a href=https://www.datacamp.com/ target=_blank rel=noopener><img src=data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDI2IDM0IiBoZWlnaHQ9IjU2IiB3aWR0aD0iNTYiPjxwYXRoIGQ9Ik0xNC4wMDEgMjUuMDI4di03LjIyNGwxMS4zOTMtNi40OTgtMi43Ny0xLjU4OC04LjYyMyA0LjkxOFY3LjM5MWMwLS40OTEtLjI2NS0uOTUtLjY5LTEuMTk0TDIuOTM4LjI0NWExLjk3NCAxLjk3NCAwIDAwLTIuMDA2LjA2QTEuOTggMS45OCAwIDAwMCAxLjk5MnYyMC4zNzVjMCAuNjkuMzUgMS4zMjEuOTM0IDEuNjg3YTEuOTczIDEuOTczIDAgMDAyLjAwMi4wNjFsOC4zMTctNC43NDN2Ni40NTdjMCAuNDk0LjI2Ni45NTIuNjk1IDEuMTk2bDEwLjY1OCA2LjA2NyAyLjc3MS0xLjU4OS0xMS4zNzYtNi40NzV6bS0yLjc0OC0xNi44NHY4LjAxNmwtOC41MDQgNC44NVYzLjMxbDguNTA0IDQuODh6IiBmaWxsPSIjMDNFRjYyIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjwvcGF0aD48L3N2Zz4K width=56px height=56px alt=DataCamp loading=lazy></a></div><div><div class="section-subheading card-title exp-title text-muted my-0">Object-Oriented Programming in R</div><div class="card-subtitle my-0 article-metadata"><a href=https://www.datacamp.com/ target=_blank rel=noopener>DataCamp</a><span class=middot-divider></span>
-Jul 2020
-– Dec 2020</div></div></div><a class=card-link href=https://www.datacamp.com/ target=_blank rel=noopener>See certificate</a></div></div></div></div></div></section>
--->
+                <!-- Master's Degree Section -->
+                <div class="row experience">
+                    <div class="col-auto text-center flex-column d-none d-sm-flex">
+                        <div class="row h-50">
+                            <div class="col border-right">&nbsp;</div>
+                            <div class="col">&nbsp;</div>
+                        </div>
+                        <div class="m-2">
+                            <span class="badge badge-pill border">&nbsp;</span>
+                        </div>
+						<div class="row h-50">
+                            <div class="col border-right">&nbsp;</div>
+                            <div class="col">&nbsp;</div>
+                        </div>
+                    </div>
+                    <div class="col py-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex align-content-start">
+                                    <div class="mr-2 mb-2">
+                                        <img src="Pictures/sbulogo.png" width="56px" height="56px" alt="Shahid Beheshti University logo" loading="lazy">
+                                    </div>
+                                    <div>
+                                        <div class="section-subheading card-title exp-title text-muted my-0">MSc in Computer Science</div>
+                                        <div class="section-subheading card-title exp-company text-muted my-0">Shahid Beheshti University</div>
+                                        <div class="text-muted exp-meta">2021-2023</div>
+                                    </div>
+                                </div>
+                                <div class="card-text">
+                                    <ul>
+                                        <li>Major: Data Mining
+                                            <ul>
+                                                <li>Machine Learning</li>
+                                                <li>Data Mining</li>
+                                                <li>Reinforcement Learning</li>
+                                                <li>Neural Networks</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bachelor's Degree Section -->
+                <div class="row experience">
+                    <div class="col-auto text-center flex-column d-none d-sm-flex">
+                        <div class="row h-50">
+                            <div class="col border-right">&nbsp;</div>
+                            <div class="col">&nbsp;</div>
+                        </div>
+                        <div class="m-2">
+                            <span class="badge badge-pill border">&nbsp;</span>
+                        </div>
+                        
+                    </div>
+                    <div class="col py-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex align-content-start">
+                                    <div class="mr-2 mb-2">
+                                        <img src="Pictures/utlogo.png" width="56px" height="56px" alt="University of Tehran logo" loading="lazy">
+                                    </div>
+                                    <div>
+                                        <div class="section-subheading card-title exp-title text-muted my-0">BSc in Mathematics and Applications</div>
+                                        <div class="section-subheading card-title exp-company text-muted my-0">University of Tehran</div>
+                                        <div class="text-muted exp-meta">2013–2020</div>
+                                    </div>
+                                </div>
+                                <div class="card-text">
+                                    <ul>
+                                        
+                                            <div class="description">
+                                                <li>Optimization: Linear and Non-Linear</li>
+                                                <li>Algebra and Linear Numeric Algebra</li>
+                                            </div>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
 
 <section id=projects class="home-section wg-collection"><div class=home-section-bg></div>
 <div class=container><div class="row justify-content-center">
@@ -147,7 +263,22 @@ Jul 2020
 
 <div class="pub-list-item view-citation" style=margin-bottom:1rem><i class="far fa-file-alt pub-icon" aria-hidden=true></i>
 
+<!--
 <b>Coming Soon</b>
+-->
+
+    <b> A Semi-supervised Fake News Detection using Sentiment Encoding and LSTM with Self-Attention
+	<br>
+    <span class="article-metadata li-cite-author">
+        Pouya Shaeri, Ali Katanforoush
+    </span>
+	<br> 2023 13th International Conference on Computer and Knowledge Engineering (ICCKE)
+    <br> Publication date: 2023/11/1, Pages: 590-595
+    <br><a class="btn btn-outline-primary btn-page-header btn-sm" href="https://ieeexplore.ieee.org/abstract/document/10326287" target="_blank" rel="noopener">PDF</a>
+    <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://scholar.google.com/scholar?q=A+Semi-supervised+Fake+News+Detection+using+Sentiment+Encoding+and+LSTM+with+Self-Attention" target="_blank" rel="noopener">Scholar</a>
+</b>
+
+
 <!--
 <p><span class="article-metadata li-cite-author">Yizhong Wang, <span class=author-highlighted>Pouya Shaeri</span>, Swaroop Mishra, Alisa Liu, Noah A. Smith, Daniel Khashabi, Hannaneh Hajishirzi</span>
 <br> arXiv:2212.10560
