@@ -5,6 +5,16 @@
 <style>
 
 
+.btn-links-container {
+    display: flex; /* Enable flexbox layout */
+    gap: 10px; /* Space between buttons */
+    margin-top: 10px; /* Optional: Add some margin for spacing */
+}
+
+.btn-links {
+    flex: 0 0 auto; /* Prevent buttons from stretching */
+}
+
 /* Default button styles */
 .navbar-nav .nav-link {
     color: black; /* Default text color */
@@ -3153,15 +3163,24 @@
                         <div class=article-style>
                             Developed a web application integrating machine learning predictive models and fisheye computer graphics visualization, allowing users to input environmental parameters and receive real-time predictions of Mean Radiant Temperature (MRT) in urban settings. Published in Sustainable Cities and Society.
                         </div>
-                        <div class=btn-links>
-                            <a class="btn btn-outline-primary btn-page-header" href="https://doi.org/10.1016/j.scs.2024.105861" target="_blank">View Publication</a>
+
+                        <div class="btn-links-container">
+                            <div class="btn-links">
+                                <a class="btn btn-outline-primary btn-page-header" href="https://shadelab.asu.edu/webmrt/" target="_blank">View Application</a>
+                            </div>
+                            <div class="btn-links">
+                                <a class="btn btn-outline-primary btn-page-header" href="https://doi.org/10.1016/j.scs.2024.105861" target="_blank">View Publication</a>
+                            </div>
                         </div>
+
                     </div>
                     <div class="col-12 col-md-6 order-first">
                         <img src="Pictures/WebMRT.jpg" height=250 width=450 alt="WebMRT logo" loading=lazy>
                     </div>
                 </div>
-    
+                
+                <br>
+
                 <!-- OpenMRT Project -->
                 <div class="row align-items-center">
                     <div class="col-12 col-md-6">
@@ -3177,6 +3196,8 @@
                     </div>
                 </div>
     
+                <br>
+
                 <!-- Fake News Detection -->
                 <div class="row align-items-center">
                     <div class="col-12 col-md-6">
@@ -3194,6 +3215,8 @@
                         <img src="Pictures/FakeNews.jpg" height=250 width=450 alt="Fake News Detection" loading=lazy>
                     </div>
                 </div>
+                
+                <br>
     
                 <!-- LRQ-Fact Project -->
                 <div class="row align-items-center">
@@ -3205,13 +3228,81 @@
                             Contributed to the development of LRQ-Fact, a framework for multimodal fact-checking using LLMs and VLMs to generate questions and detect misinformation, achieving improved performance and model generalizability.
                         </div>
                         <div class=btn-links>
-                            <a class="btn btn-outline-primary btn-page-header" href="#" target="_blank">Learn More</a>
+                            <a class="btn btn-outline-primary btn-page-header" href="https://doi.org/10.48550/arXiv.2410.04616" target="_blank">Learn More</a>
                         </div>
                     </div>
                     <div class="col-12 col-md-6 order-first">
                         <img src="Pictures/LRQFact.jpg" height=250 width=450 alt="LRQ-Fact Project" loading=lazy>
                     </div>
                 </div>
+
+                <br>
+
+            <!-- Project 1 -->
+            <div class="row align-items-center">
+                <div class="col-12 col-md-6">
+                    <div class="section-subheading article-title mb-0 mt-0">
+                        Gaussian Naive Bayes with Feature Selection and PCA
+                    </div>
+                    <div class="article-style">
+                        Implemented Gaussian Naive Bayes from scratch with Forward and Backward Feature Selection, PCA, SVM, and Decision Trees. Tested on datasets: Mobile Prices and Heart Disease, Data Mining, Spring 2022.
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 order-first">
+                    <img src="Pictures/NaiveBayes.jpg" height="250" width="450" alt="Gaussian Naive Bayes Project" loading="lazy">
+                </div>
+            </div>
+
+            <br>
+
+            <!-- Project 2 -->
+            <div class="row align-items-center">
+                <div class="col-12 col-md-6">
+                    <div class="section-subheading article-title mb-0 mt-0">
+                        Time-Series Interpolation and Outlier Detection
+                    </div>
+                    <div class="article-style">
+                        Developed time-series interpolation using Polynomial and Spline techniques for Gregorian and Lunar-Hijri calendars. Built a Python Flask API for deployment and tested with JSON datasets. Data Mining, Spring 2022.
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 order-first">
+                    <img src="Pictures/TimeSeries.jpg" height="250" width="450" alt="Time-Series Interpolation Project" loading="lazy">
+                </div>
+            </div>
+
+            <br>
+
+            <!-- Project 3 -->
+            <div class="row align-items-center">
+                <div class="col-12 col-md-6">
+                    <div class="section-subheading article-title mb-0 mt-0">
+                        Linear and Nonlinear Regression with Regularization
+                    </div>
+                    <div class="article-style">
+                        Implemented regression and classification models with regularization and hyperparameter tuning from scratch in Python. Tested on Computers and Heart Disease datasets and visualized results. Machine Learning, Fall 2021.
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 order-first">
+                    <img src="Pictures/Regression.jpg" height="250" width="450" alt="Regression Project" loading="lazy">
+                </div>
+            </div>
+
+            <br>
+
+            <!-- Project 4 -->
+            <div class="row align-items-center">
+                <div class="col-12 col-md-6">
+                    <div class="section-subheading article-title mb-0 mt-0">
+                        Naive Bayes Classifier with Data Preprocessing
+                    </div>
+                    <div class="article-style">
+                        Implemented a Naive Bayes Classifier, with advanced data preprocessing and sample generation from probability distributions. Tested on the Titanic dataset. Machine Learning, Sharif University, Fall 2021.
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 order-first">
+                    <img src="Pictures/Titanic.jpg" height="250" width="450" alt="Titanic Project" loading="lazy">
+                </div>
+            </div>
     
             </div>
         </div>
