@@ -2612,6 +2612,18 @@
 <link rel=alternate hreflang=en-us href=https://academic-demo.netlify.app />
 <meta name=theme-color content=#1565c0>
 <style>
+    /* Ensure the navbar-toggler is visible on mobile */
+    .navbar-toggler {
+        display: inline-block !important; /* Ensure it's visible */
+        border: none; /* Optional: remove border if undesired */
+        background-color: transparent; /* Match your navbar style */
+    }
+
+    /* Adjust navbar-collapse for mobile */
+    .navbar-collapse {
+        flex-grow: 1;
+        justify-content: flex-end; /* Align navigation items properly */
+    }
     .sf-hidden {
         display: none !important
     }
