@@ -4,6 +4,53 @@
 <meta name=viewport content="width=device-width,initial-scale=1">
 <style>
 
+.see-more-button {
+  background-color: white;
+  color: #555;
+  border: 2px dashed #aaa;
+  padding: 0.6rem 1.4rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.see-more-button:hover {
+  background-color: #f9f9f9;
+  border-color: #666;
+  color: #000;
+  cursor: pointer;
+}
+
+
+.see-more-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+  width: 100%;
+}
+
+.see-more-wrapper .line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, rgba(255,255,255,0), rgba(0,0,0,0.3), rgba(255,255,255,0));
+  opacity: 0.7;
+}
+
+.hidden-projects {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease, opacity 0.6s ease;
+}
+
+.hidden-projects.show {
+  opacity: 1;
+  max-height: 5000px;
+}
+
 #projects .row {
         padding: 15px; /* Add padding to each row */
     }
@@ -13,11 +60,16 @@
     }
 
     #projects img {
-        width: 90%;
-        height: auto;
-        padding: 10px; /* Add padding around images */
-        box-sizing: border-box; /* Ensure padding doesn't affect dimensions */
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    box-sizing: border-box;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     }
+
 
     .article-style {
         padding: 10px; /* Add padding around the project text */
@@ -2612,6 +2664,11 @@
 <link rel=alternate hreflang=en-us href=https://academic-demo.netlify.app />
 <meta name=theme-color content=#1565c0>
 <style>
+
+    #more-projects {
+  transition: all 0.3s ease-in-out;
+}
+
     /* Ensure the navbar-toggler is visible on mobile */
     .navbar-toggler {
         display: inline-block !important; /* Ensure it's visible */
@@ -2667,6 +2724,46 @@
     padding-bottom: 40px !important;
     }
 
+    .mobile-navbar {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: white;
+        border-bottom: 1px solid #ddd;
+        z-index: 9999;
+        padding: 10px 0;
+        }
+
+        .mobile-navbar ul {
+        display: flex;
+        justify-content: space-around;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        }
+
+        .mobile-navbar a {
+        font-size: 14px;
+        color: #333;
+        font-weight: 600;
+        text-decoration: none;
+        padding: 6px 10px;
+        }
+
+        .mobile-navbar a:hover {
+        color: #2962ff;
+        text-decoration: #11539e;
+        }
+
+        /* Hide on large screens */
+        @media (min-width: 992px) {
+        .mobile-navbar {
+            display: none;
+        }
+        }
+
+
 </style>
 
 <head>
@@ -2697,6 +2794,17 @@
                     </div>
                 </div>
             </nav>
+
+            <nav class="mobile-navbar d-lg-none">
+                <ul>
+                    <li><a href="#about">Home</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#publications">Publications</a></li>
+                    <li><a href="Files/CV_PouyaShaeri.pdf" download="CV">CV</a></li>
+                </ul>
+            </nav>
+
                         <li class="nav-item d-none d-lg-inline-flex">
 
                             <template shadowroot=closed>
@@ -3283,71 +3391,85 @@
 
                 <br>
 
-            <!-- Project 1 -->
-            <div class="row align-items-center">
-                <div class="col-12 col-md-6">
-                    <div class="section-subheading article-title mb-0 mt-0">
-                        Gaussian Naive Bayes with Feature Selection and PCA
-                    </div>
-                    <div class="article-style">
-                        Implemented Gaussian Naive Bayes from scratch with Forward and Backward Feature Selection, PCA, SVM, and Decision Trees. Tested on datasets: Mobile Prices and Heart Disease, Data Mining, Spring 2022.
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 order-first">
-                    <img src="Pictures/NaiveBayes.jpg" height="250" width="450" alt="Gaussian Naive Bayes Project" loading="lazy">
-                </div>
+
+            <!-- See More Button -->
+            <div class="see-more-wrapper">
+            <span class="line"></span>
+            <button id="see-more-btn" class="see-more-button">See More Projects</button>
+            <span class="line"></span>
             </div>
 
-            <br>
 
-            <!-- Project 2 -->
-            <div class="row align-items-center">
-                <div class="col-12 col-md-6">
-                    <div class="section-subheading article-title mb-0 mt-0">
-                        Time-Series Interpolation and Outlier Detection
-                    </div>
-                    <div class="article-style">
-                        Developed time-series interpolation using Polynomial and Spline techniques for Gregorian and Lunar-Hijri calendars. Built a Python Flask API for deployment and tested with JSON datasets. Data Mining, Spring 2022.
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 order-first">
-                    <img src="Pictures/TimeSeries.jpg" height="250" width="450" alt="Time-Series Interpolation Project" loading="lazy">
-                </div>
-            </div>
+            <!-- Hidden Projects Start -->
+            <div id="more-projects" class="hidden-projects">
 
-            <br>
+                <!-- Project 1 -->
+                <div class="row align-items-center">
+                    <div class="col-12 col-md-6">
+                        <div class="section-subheading article-title mb-0 mt-0">
+                            Gaussian Naive Bayes with Feature Selection and PCA
+                        </div>
+                        <div class="article-style">
+                            Implemented Gaussian Naive Bayes from scratch with Forward and Backward Feature Selection, PCA, SVM, and Decision Trees. Tested on datasets: Mobile Prices and Heart Disease, Data Mining, Spring 2022.
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 order-first">
+                        <img src="Pictures/NaiveBayes.jpg" height="250" width="450" alt="Gaussian Naive Bayes Project" loading="lazy">
+                    </div>
+                </div>
 
-            <!-- Project 3 -->
-            <div class="row align-items-center">
-                <div class="col-12 col-md-6">
-                    <div class="section-subheading article-title mb-0 mt-0">
-                        Linear and Nonlinear Regression with Regularization
-                    </div>
-                    <div class="article-style">
-                        Implemented regression and classification models with regularization and hyperparameter tuning from scratch in Python. Tested on Computers and Heart Disease datasets and visualized results. Machine Learning, Fall 2021.
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 order-first">
-                    <img src="Pictures/Regression.jpg" height="250" width="450" alt="Regression Project" loading="lazy">
-                </div>
-            </div>
+                <br>
 
-            <br>
+                <!-- Project 2 -->
+                <div class="row align-items-center">
+                    <div class="col-12 col-md-6">
+                        <div class="section-subheading article-title mb-0 mt-0">
+                            Time-Series Interpolation and Outlier Detection
+                        </div>
+                        <div class="article-style">
+                            Developed time-series interpolation using Polynomial and Spline techniques for Gregorian and Lunar-Hijri calendars. Built a Python Flask API for deployment and tested with JSON datasets. Data Mining, Spring 2022.
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 order-first">
+                        <img src="Pictures/TimeSeries.jpg" height="250" width="450" alt="Time-Series Interpolation Project" loading="lazy">
+                    </div>
+                </div>
 
-            <!-- Project 4 -->
-            <div class="row align-items-center">
-                <div class="col-12 col-md-6">
-                    <div class="section-subheading article-title mb-0 mt-0">
-                        Naive Bayes Classifier with Data Preprocessing
+                <br>
+
+                <!-- Project 3 -->
+                <div class="row align-items-center">
+                    <div class="col-12 col-md-6">
+                        <div class="section-subheading article-title mb-0 mt-0">
+                            Linear and Nonlinear Regression with Regularization
+                        </div>
+                        <div class="article-style">
+                            Implemented regression and classification models with regularization and hyperparameter tuning from scratch in Python. Tested on Computers and Heart Disease datasets and visualized results. Machine Learning, Fall 2021.
+                        </div>
                     </div>
-                    <div class="article-style">
-                        Implemented a Naive Bayes Classifier, with advanced data preprocessing and sample generation from probability distributions. Tested on the Titanic dataset. Machine Learning, Sharif University, Fall 2021.
+                    <div class="col-12 col-md-6 order-first">
+                        <img src="Pictures/Regression.jpg" height="250" width="450" alt="Regression Project" loading="lazy">
                     </div>
                 </div>
-                <div class="col-12 col-md-6 order-first">
-                    <img src="Pictures/Titanic.jpg" height="250" width="450" alt="Titanic Project" loading="lazy">
+
+                <br>
+
+                <!-- Project 4 -->
+                <div class="row align-items-center">
+                    <div class="col-12 col-md-6">
+                        <div class="section-subheading article-title mb-0 mt-0">
+                            Naive Bayes Classifier with Data Preprocessing
+                        </div>
+                        <div class="article-style">
+                            Implemented a Naive Bayes Classifier, with advanced data preprocessing and sample generation from probability distributions. Tested on the Titanic dataset. Machine Learning, Sharif University, Fall 2021.
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 order-first">
+                        <img src="Pictures/Titanic.jpg" height="250" width="450" alt="Titanic Project" loading="lazy">
+                    </div>
                 </div>
-            </div>
+
+            </div> <!-- Hidden Projects End -->
     
             </div>
         </div>
@@ -3423,6 +3545,51 @@
                         </b>
                     </div>
 
+                    <!-- MID-L Paper -->
+                        <div class="pub-list-item view-citation" style="margin-bottom:1rem;">
+                        <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+                        <b> MID-L: Matrix-Interpolated Dropout Layer with Layer-wise Neuron Selection </b>
+                        <br>
+                        <span class="article-metadata li-cite-author">
+                            Pouya Shaeri, Ariane Middel
+                        </span>
+                        <br> arXiv preprint, <a href="https://arxiv.org/abs/2505.11416" target="_blank" rel="noopener">DOI</a>
+                        <br> Publication date: 2025
+                        <br>
+                        <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://arxiv.org/pdf/2505.11416" target="_blank" rel="noopener">PDF</a>
+                        <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://scholar.google.com/scholar?q=MID-L:+Matrix-Interpolated+Dropout+Layer+with+Layer-wise+Neuron+Selection" target="_blank" rel="noopener">Scholar</a>
+                        </div>
+
+                        <!-- Climate Crisis Survey Paper -->
+                        <div class="pub-list-item view-citation" style="margin-bottom:1rem;">
+                        <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+                        <b> Sentiment and Social Signals in the Climate Crisis: A Survey on Analyzing Social Media Responses to Extreme Weather Events </b>
+                        <br>
+                        <span class="article-metadata li-cite-author">
+                            Pouya Shaeri, Yasamin Mohammadpour, Alimohammad Beigi, Ariane Middel, Huan Liu
+                        </span>
+                        <br> arXiv preprint, <a href="https://arxiv.org/abs/2504.18837" target="_blank" rel="noopener">DOI</a>
+                        <br> Publication date: 2025
+                        <br>
+                        <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://arxiv.org/pdf/2504.18837" target="_blank" rel="noopener">PDF</a>
+                        <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://scholar.google.com/scholar?q=Sentiment+and+Social+Signals+in+the+Climate+Crisis:+A+Survey+on+Analyzing+Social+Media+Responses+to+Extreme+Weather+Events" target="_blank" rel="noopener">Scholar</a>
+                        </div>
+
+                        <!-- PINN MRT Paper -->
+                        <div class="pub-list-item view-citation" style="margin-bottom:1rem;">
+                        <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+                        <b> A Multimodal Physics-Informed Neural Network Approach for Mean Radiant Temperature Modeling </b>
+                        <br>
+                        <span class="article-metadata li-cite-author">
+                            Pouya Shaeri, Saud AlKhaled, Ariane Middel
+                        </span>
+                        <br> arXiv preprint, <a href="https://arxiv.org/abs/2503.08482" target="_blank" rel="noopener">DOI</a>
+                        <br> Publication date: 2025
+                        <br>
+                        <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://arxiv.org/pdf/2503.08482" target="_blank" rel="noopener">PDF</a>
+                        <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://scholar.google.com/scholar?q=A+Multimodal+Physics-Informed+Neural+Network+Approach+for+Mean+Radiant+Temperature+Modeling" target="_blank" rel="noopener">Scholar</a>
+                        </div>
+
                         <div id=modal class="modal fade sf-hidden" role=dialog></div><iframe id=netlify-identity-widget
                             title="Netlify identity widget"
                             style=position:fixed;top:0;left:0;border:none;width:100%;height:100%;overflow:visible;background:transparent;display:none;z-index:99></iframe><grammarly-desktop-integration
@@ -3469,3 +3636,21 @@
                         
                         
                         </script>
+
+                        <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const button = document.getElementById("see-more-btn");
+    const section = document.getElementById("more-projects");
+
+    button.addEventListener("click", function () {
+      section.classList.toggle("show");
+      button.textContent = section.classList.contains("show")
+        ? "See Less Projects"
+        : "See More Projects";
+
+      if (section.classList.contains("show")) {
+        section.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    });
+  });
+</script>
