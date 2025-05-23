@@ -2766,11 +2766,180 @@ html, body {
 
         /* Hide on large screens */
         @media (min-width: 992px) {
-        .mobile-navbar {
-            display: none;
-        }
+            .mobile-navbar {
+                display: none;
+            }
         }
 
+        .theme-toggle {
+        display: flex;
+        position: relative;
+        align-items: center;
+        margin-left: 15px;
+        top: 5px;
+        left: 30px;
+        }
+
+        #theme-switch {
+        display: none;
+        }
+
+        .toggle-label {
+        width: 50px;
+        height: 20px;
+        background: #ccc;
+        border-radius: 50px;
+        position: relative;
+        cursor: pointer;
+        transition: background 0.3s;
+        }
+
+        .toggle-label::before {
+        content: '⏾';
+        position: relative;
+        left: 60px;
+        top: -2px;
+        font-size: 19px;
+        transition: opacity 0.3s;
+        font-weight: bolder;
+        }
+
+        .toggle-label::after {
+        content: '☀︎';
+        position: absolute;
+        left: -30px;
+        top: -5px;
+        font-size: 25px;
+        transition: opacity 0.3s;
+        }
+
+        .toggle-thumb {
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        width: 13px;
+        height: 13px;
+        background: white;
+        border-radius: 50%;
+        transition: transform 0.3s;
+        }
+
+        #theme-switch:checked + .toggle-label {
+        background: #555;
+        }
+
+        #theme-switch:checked + .toggle-label .toggle-thumb {
+        transform: translateX(30px);
+        }
+
+body.dark-mode {
+  background-color: #121212;
+  color: #eeeeee;
+}
+
+.dark-mode .navbar {
+  background-color: #1e1e1e;
+}
+
+.dark-mode .nav-link {
+  color: #bbb;
+}
+
+.dark-mode .nav-link:hover,
+.dark-mode .nav-link.active {
+  color: #fff;
+}
+
+.dark-mode .navbar-brand,
+.dark-mode .nav-link {
+  color: #dddddd !important;
+}
+
+.dark-mode .nav-link:hover,
+.dark-mode .nav-link.active {
+  color: #ffffff !important;
+}
+
+.dark-mode .home-section,
+.dark-mode .section-heading,
+.dark-mode .home-section * {
+  color: #eeeeee;
+}
+
+.dark-mode .see-more-button {
+  background-color: #222;
+  color: #ccc;
+  border-color: #555;
+}
+
+.dark-mode .mobile-navbar {
+  background-color: #1a1a1a;
+}
+
+.navbar .theme-toggle {
+  margin-left: auto;
+  margin-right: 35px;
+}
+
+/* Main background blocks */
+.dark-mode .home-section,
+.dark-mode .container,
+.dark-mode .wg-collection,
+.dark-mode .section-heading {
+  background-color: #121212;
+  color: #eeeeee;
+}
+
+/* Text blocks inside content */
+.dark-mode .article-style,
+.dark-mode .pub-list-item,
+.dark-mode .card {
+  background-color: #1a1a1a;
+  color: #dddddd;
+}
+
+/* Button hover fix if needed */
+.dark-mode .btn-outline-primary:hover {
+  background-color: #2962ff;
+  color: white;
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3 {
+  color: #eeeeee !important;
+}
+
+.dark-mode .text-muted {
+  color: #aaaaaa !important;
+}
+
+
+.dark-mode .section-subheading,
+.dark-mode .exp-title,
+.dark-mode .exp-company,
+.dark-mode .exp-meta {
+  color: #dddddd !important;
+}
+
+.dark-mode .text-muted {
+  color: #aaaaaa !important;
+}
+
+.dark-mode .section-subheading,
+.dark-mode .exp-title,
+.dark-mode .exp-company,
+.dark-mode .exp-meta {
+  color: #dddddd !important;
+}
+
+.dark-mode .mobile-navbar a {
+  color: #dddddd !important;
+}
+
+.dark-mode .mobile-navbar a:hover {
+  color: #ffffff !important;
+}
 
 </style>
 
@@ -2791,6 +2960,12 @@ html, body {
             <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar-main">
                 <div class="container-xl">
                     <a class="navbar-brand" href="https://pouyashaeri.github.io">Pouya Shaeri</a>
+                    <div class="theme-toggle">
+                        <input type="checkbox" id="theme-switch">
+                        <label for="theme-switch" class="toggle-label">
+                            <span class="toggle-thumb"></span>
+                        </label>
+                    </div>
                     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -3700,5 +3875,31 @@ html, body {
                             });
                         });
                         </script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const themeSwitch = document.getElementById("theme-switch");
+    const metaThemeColor = document.querySelector("meta[name=theme-color]");
+
+    // Load from localStorage if user has a preference
+    if (localStorage.getItem("theme") === "dark") {
+      document.body.classList.add("dark-mode");
+      themeSwitch.checked = true;
+      metaThemeColor.setAttribute("content", "#121212");
+    }
+
+    themeSwitch.addEventListener("change", function () {
+      document.body.classList.toggle("dark-mode");
+
+      // Update theme color for iPhone notch
+      metaThemeColor.setAttribute("content", document.body.classList.contains("dark-mode") ? "#121212" : "#ffffff");
+
+      // Save preference
+      localStorage.setItem("theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
+    });
+  });
+</script>
+
 
 </body>
