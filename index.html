@@ -3061,6 +3061,25 @@ body.dark-mode {
   }
 }
 
+
+
+
+
+#profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+#profile-pic.hover-animate {
+  width: 150px;
+  height: 220px; /* adjust to your GIF height */
+  border-radius: 10px; /* rectangular with soft corners */
+}
+
 </style>
 
 <head>
@@ -3397,8 +3416,18 @@ body.dark-mode {
             <div class=row>
                 <div class="col-12 col-lg-4">
                     <div id=profile>
-                        <img class="avatar avatar-circle" width=150 height=150 src="Pictures/PouyaShaeri.jpg"
-                            alt="Pouya Shaeri">
+                        <!-- <img class="avatar avatar-circle" width=150 height=150 src="Pictures/PouyaShaeri.jpg"
+                            alt="Pouya Shaeri"> -->
+
+
+
+                        <img
+                        id="profile-pic"
+                        class="avatar avatar-circle"
+                        src="Pictures/PouyaShaeri.jpg"
+                        alt="Pouya Shaeri"
+                        width="150"
+                        height="150">
                         <!-- <div class=portrait-title>
                             <h2>Pouya Shaeri</h2>
                         </div> -->
@@ -4072,5 +4101,22 @@ body.dark-mode {
   });
 </script>
 
+
+<script>
+  const profilePic = document.getElementById("profile-pic");
+
+  const staticImg = "Pictures/PouyaShaeri.jpg";
+  const animatedGif = "Pictures/PouyaShaeri.gif";
+
+  profilePic.addEventListener("mouseenter", () => {
+    profilePic.src = animatedGif;
+    profilePic.classList.add("hover-animate");
+  });
+
+  profilePic.addEventListener("mouseleave", () => {
+    profilePic.src = staticImg;
+    profilePic.classList.remove("hover-animate");
+  });
+</script>
 
 </body>
